@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<title>USER REGISTER</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/identify.css">
+</head>
+
+<body>
+<div class="wrapper2">  
+
+    <span style="color:orangered">{{ error_msg }}</span>
+    <form method="POST" enctype="multipart/form-data">						   <!-- action属性为账户密码提交文件 -->
+    <div class="header">用户注册</div> <br>
+        <ul>
+            <li>
+                <div class="code">
+                    <span class="iconfont icon-key"></span><input type="text" name="username" placeholder="请输入用户名" >
+                </div>
+            </li>
+            <li>
+                <div class="text">
+                    <span class="yonghu"></span><input type="password" name="pw" placeholder="请输入密码">
+                </div>
+            </li>
+            <li>
+                <div class="password">
+                    <span class="mima"></span><input type="password" name="repw" placeholder="请确认密码">
+                </div>
+            </li>
+            <li>
+                <div class="portrait">
+                <input type="file" id="upload" name="test" />&nbsp上传头像<br/>
+                </div>
+            </li>
+            <li>
+                <div class="text">
+                <input type="text" name="name"  placeholder="请输入姓名" >
+                </div>
+            </li>
+            <li>
+                <div class="text">
+                <input type="text" name="gender" placeholder="请输入性别" >
+                </div>
+            </li>
+            <li>
+                <div class="text">
+                <input type="text" name="phone" placeholder="请输入联系方式" >
+                </div>
+            </li>
+            <li>
+                <div class="text">
+                <input type="text" name="birth" placeholder="请输入出生日期：年-月-日" >
+                </div>
+            </li>
+            <li>
+                <input type="submit" value="注册">
+            </li>
+        </ul>
+    </form>
+    
+</div>
+
+
+</body>
+</html>

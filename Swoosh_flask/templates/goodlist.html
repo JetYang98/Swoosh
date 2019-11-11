@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css"/>
+    <meta charset="UTF-8">
+    <title>优惠商品信息</title>
+</head>
+<body>
+    <form action=" " method="POST">
+        <input type="text" name="p1" value="{{ username }}" style="display: none;">
+        <div id="top">
+            <div class="top">
+                <div class="logo">
+                    <input type="submit" name="" formmethod="POST" formaction="/system/" style="background-image: url(/static/img/logo.png); width: 550px; height: 65px; background-color: #ffffff00; cursor: pointer;" value="">
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="delete1">
+                <input type="text" class="text" name="id"  placeholder="请输入商品ID删除优惠" />
+                <input type="submit" class="delete_l" value="删除" name="delete">
+            </div>
+            <div class="search">
+                <input type="text" class="text" name="id_or_name"  placeholder="请输入商品ID或商品名" />
+                <input type="submit" class="search_l" value="搜索" name="search">
+            </div>
+            <div class="list_cha">
+                <table width="720px" border="0" class="stripe" cellpadding="0" cellspacing="0"> 
+                    <tr> 
+                        <td width="140px" style="text-align: center;">商品照片</td> 
+                        <td width="160px" style="text-align: center;">商品ID</td> 
+                        <td width="140px" style="text-align: center;">商品名称</td> 
+                        <td width="100px" style="text-align: center;">现价</td>    
+                        <td width="120px" style="text-align: center;">优惠信息</td>
+                        <td width="200px" style="text-align: center;">优惠区间</td>                         
+                    </tr>
+                    {% for data in datas %}
+                    <tr>
+                        <td width="140px">
+                            <img src="/static/img/{{ data[0] }}.png" width="100px" height="100px">
+                        </td>
+                        <td width="160px" style="text-align: center;">{{ data[1] }}</td>
+                        <td width="140px" style="text-align: center;">{{ data[2] }}</td>
+                        <td width="100px" style="text-align: center;">{{ data[3] }}</td>
+                        <td width="120px" style="text-align: center;">{{ data[4] }}</td>
+                        <td width="200px" style="text-align: center;">{{ data[5] }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+    

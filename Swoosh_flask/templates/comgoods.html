@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/comgoods.css"/>
+    <title>编辑优惠商品</title>
+</head>
+<body>
+    <form method="POST" enctype="multipart/form-data" >
+        <input type="text" name="p1" value="{{ username }}" style="display: none;">
+    <div id="top">
+        <div class="top">
+            <div class="logo">
+                <input type="submit" name="" formmethod="POST" formaction="/system/" style="background-image: url(/static/img/logo.png); width: 550px; height: 65px; background-color: #ffffff00; cursor: pointer;" value="">
+            </div> 
+        </div>
+    </div>
+    <div>
+        <div class="list_cha">
+        <table width="915px" border="0" class="stripe" cellpadding="0" cellspacing="0">
+            <tr> 
+                <td width="300px">
+                    <div>
+                        <input type="file" id="upload1" name="upload" /><br/>
+                        <input type="submit" id="upclick1" value="确定"/>
+                    </div>
+                </td> 
+                <td width="150px" style="text-align: center;">
+                    <input type="text" placeholder="请输入商品ID" name="id"><br>
+                </td> 
+                <td width="200px" style="text-align: center;">
+                    <input type="text" placeholder="请输入商品名称" name="name"><br>
+                </td>  
+                <td width="120px" style="text-align: center;">
+                    <input type="text" placeholder="请输入商品单价" name="price"><br>
+                </td>
+                <td width="110px">
+                    <input type="text" placeholder="请输入类型" name="type"><br>
+                </td>
+                <td width="100px" style="text-align: center;">
+                    <input type="text" placeholder="请输入商品折扣" name="discount"><br>
+                </td>
+                <td width="110px">
+                    <input type="text" placeholder="开始时间(xxxx-xx-xx)" name="discount_start"><br>
+                </td>
+                <td width="110px">
+                    <input type="text" placeholder="结束时间(xxxx-xx-xx)" name="discount_end"><br>
+                </td>
+                <td width="150" style="text-align: center;">
+                    <input type="text" placeholder="请输入商品库存" name="kucun"><br>
+                </td>
+                <td width="110px">
+                    <input type="text" placeholder="请输入进货渠道" name="qudao"><br>
+                </td>
+            </tr>
+        </table>
+        </div>
+    </div>
+    <div style="margin: auto;width: 100px";">
+        <span style="color:orangered;font-size: 16px;" >{{ error_msg }}</span>
+    </div>
+    </form>
+</body>
+</html>

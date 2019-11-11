@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/common.css"/>
+</head>
+<body>
+	<form method="POST" enctype="multipart/form-data" >
+		<input type="text" name="p1" value="{{ username }}" style="display: none;">
+	<div id="top">
+		<div class="top">
+			<div class="logo">
+				<input type="submit" name="" formmethod="POST" formaction="/system/" style="background-image: url(/static/img/logo.png); width: 550px; height: 65px; background-color: #ffffff00; cursor: pointer;" value="">
+			</div>
+		</div>
+	</div>
+	<div class="fileup">
+	　　　<input type="file" id="upload" name="upload" /><br/>
+	　　　<input type="submit" id="upclick" value="点击上传"/>
+	</div>
+	<div style="margin: auto;width: 100px;">
+         <span style="color:orangered;font-size: 16px;" >{{ error_msg }}</span>
+    </div>
+    </form>
+</body>
+</html>
+

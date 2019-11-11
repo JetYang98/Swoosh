@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome to Swoosh System</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/login.css">
+</head>
+
+<body>
+<!-- <div class="logo"><img src="img/logo1.png" alt="Logo"></div> -->
+<div class="workingplace"><img src="/static/img/login_1.png" alt="Working Place"></div>
+<div class="wire"></div>
+<div class="wrapper">  
+
+    <form action=" " method="POST">						   <!-- action属性为账户密码提交文件 -->
+    <div class="header">欢迎使用请登录</div> <br>
+        <ul>
+            <li>
+                <div class="text">
+                    <span class="yonghu"></span><input type="text" placeholder="请输入用户名" name="username">
+                </div>
+            </li>
+            <li>
+                <div class="password">
+                    <span class="mima"></span><input type="password" placeholder="请输入密码" name="password">
+                </div>
+            </li>
+            <!-- 记住密码和忘记操作 -->
+            <!-- <li class="remember">
+                <input type="checkbox">记住我
+            </li>
+            <li>
+                <a href="">忘记我</a>
+            </li> -->
+            <li>
+                <input type="submit" value="登录">
+            </li>
+        </ul>
+    <div class="renzheng"><a href="/identify/" target="blank"><p>账号未认证？点击认证账号</p></a></div>
+    <span style="color:orangered">{{ error_msg }}</span>
+    </form>
+    
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>商品分类</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/classgoods.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css"/>
+</head>
+<body>
+    <form action=" " method="post">
+        <input type="text" name="p1" value="{{ username }}" style="display: none;">
+    <div id="top">
+        <div class="top">
+            <div class="logo">
+                <input type="submit" name="" formmethod="POST" formaction="/system/" style="background-image: url(/static/img/logo.png); width: 550px; height: 65px; background-color: #ffffff00; cursor: pointer;" value="">
+            </div>
+        </div>
+    </div>
+    <div class="search">
+        <input type="text" class="text" placeholder="请输入商品ID或商品名" name="id_or_name" />
+        <input type="submit" class="search_l" value="搜索">
+    </div>
+    <div style="width:750px; margin:auto">
+        <img src="/static/predict/{{ img_name }}.png" style="margin: auto">
+    </div>
+    </form>
+</body>
+    

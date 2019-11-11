@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8" />
+	<title>Echarts</title>
+	<link rel="stylesheet" type="text/css" href="/static/plugin/bootstrap.css"/>
+	<link rel="stylesheet" href="/static/css/charts.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/common.css"/>
+</head>
+<body>
+	<form>
+		<input type="text" name="p1" value="{{ username }}" style="display: none;">
+	<div id="top">
+		<div class="top">
+			<div class="logo">
+				<input type="submit" name="" formmethod="POST" formaction="/system/" style="background-image: url(/static/img/logo.png); width: 550px; height: 65px; background-color: #ffffff00; cursor: pointer;" value="">
+			</div>
+		</div>
+	</div>
+	<main class="container">
+		<div class="row">
+			<div id="echarts-1" class="col-xs-6"></div>
+			<div id="echarts-2" class="col-xs-6"></div>
+		</div>
+		<div class="row">
+			<div id="echarts-3" class="col-xs-12"></div>
+		</div>
+	</main>
+	</form>
+</body>
+	<!--js部分-->
+	<script src="/static/plugin/jquery.min.js"></script>
+	<script src="/static/plugin/echarts.js"></script>
+	<script src="/static/js/common.js"></script>
+</html>

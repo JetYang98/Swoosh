@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Identify</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/identify.css">
+</head>
+
+<body>
+<div class="wrapper">  
+
+    <form action=" " method="POST">						   <!-- action属性为账户密码提交文件 -->
+    <div class="header">认证系统</div> <br>
+        <ul>
+            <li>
+                <div class="code">
+                    <span class="iconfont icon-key"></span><input type="text" placeholder="请输入认证序列号"  name="license">
+                </div>
+            </li>
+            <li>
+                <div class="text">
+                    <span class="yonghu"></span><input type="text" placeholder="请输入用户名" name="username">
+                </div>
+            </li>
+            <li>
+                <div class="password">
+                    <span class="mima"></span><input type="password" placeholder="请输入密码" name="password">
+                </div>
+
+            </li>
+            <li>
+                <input type="submit" value="认证">
+            </li>
+        </ul>
+        <span style="color:orangered">{{ error_msg }}</span>
+    </form>
+    
+</div>
+
+
+</body>
+</html>

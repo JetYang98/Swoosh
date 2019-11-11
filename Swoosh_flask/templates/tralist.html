@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css"/>
+    <meta charset="UTF-8">
+    <title>订单列表信息</title>
+</head>
+<body>
+    <form action=" " method="post">
+        <input type="text" name="p1" value="{{ username }}" style="display: none;">
+    <div id="top">
+        <div class="top">
+            <div class="logo">
+                <input type="submit" name="" formmethod="POST" formaction="/system/" style="background-image: url(/static/img/logo.png); width: 550px; height: 65px; background-color: #ffffff00; cursor: pointer;" value="">
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="search">
+            <input type="text" class="text"  placeholder="请输入订单ID或会员ID" name="id" />
+            <input type="submit" class="search_l" value="搜索">
+        </div>
+        <div class="list_cha">
+            <table width="830px" border="0" class="stripe" cellpadding="0" cellspacing="0"> 
+                <tr> 
+                    <td width="150px" style="text-align: center;">订单号</td> 
+                    <td width="140px" style="text-align: center;">顾客ID</td>     
+                    <td width="120px" style="text-align: center;">顾客姓名</td>
+                    <td width="110px" style="text-align: center;">订单总价</td>
+                    <td width="170px" style="text-align: center;">订单时间</td>                         
+                    <td width="140px" style="text-align: center;">提交人</td>
+                </tr>
+                {% for data in datas %}
+                <tr>
+                    <td width="150px" style="text-align: center;">{{ data[0] }}</td>
+                    <td width="140px" style="text-align: center;">{{ data[1] }}</td>
+                    <td width="120px" style="text-align: center;">{{ data[2] }}</td>
+                    <td width="110px" style="text-align: center;">{{ data[3] }}</td>
+                    <td width="170px" style="text-align: center;">{{ data[4] }}</td>
+                    <td width="140px" style="text-align: center;">{{ data[5] }}</td>
+                </tr>
+                {% endfor %}
+            </table> 
+        </div>
+    </div>
+    </form>
+</body>
+</html>
+    

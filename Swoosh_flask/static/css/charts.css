@@ -1,0 +1,17 @@
+@charset "utf-8";
+/*
+ **功能:图表
+ **作者:loho
+ **日期:2017-04-07
+ */
+html,body{
+	
+}
+#echarts-1,#echarts-3{
+	height: 420px;
+}
+
+#echarts-2{
+	height: 360px;
+	width: 530px;
+}

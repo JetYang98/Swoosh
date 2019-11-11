@@ -1,0 +1,32 @@
+
+#upload-form1{
+	margin-top: -20px;
+	width: 200px;
+
+	margin-left: 10px;
+}
+
+input{
+	width: 130px;
+	background-color: white;
+	border: 1px solid #3388cb;
+	border-radius: 25px;
+
+}
+
+#upload1{
+	width: 180px;
+	height: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+
+}
+
+
+#upclick1{
+	width: 200px;
+	height: 30px;
+	padding-left: 20px;
+
+}

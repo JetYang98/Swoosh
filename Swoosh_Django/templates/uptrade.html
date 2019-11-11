@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/common.css"/>
+</head>
+<body>
+	<div id="top">
+		<div class="top">
+			<div class="logo">
+				<a href="/system/" target="about_blank"><img src="/static/img/logo.png"/></a>
+			</div>
+		</div>
+	</div>
+	<div class="fileup">
+	<form id="upload-form" method="POST" enctype="multipart/form-data" >
+	　　　<input type="file" id="upload" name="upload" /><br/>
+	　　　<input type="submit" id="upclick" value="点击上传"/>
+    </form>
+	</div>
+<div style="margin: auto;width: 100px;">
+         <span style="color:orangered;font-size: 16px;" >{{ error_msg }}</span>
+    </div>
+</body>
+</html>
+
