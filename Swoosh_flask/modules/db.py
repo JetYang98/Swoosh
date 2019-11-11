@@ -189,7 +189,7 @@ class Db:
 		'''
 		self.cursor.execute(sql)
 		for (license,vendor_name) in self.cursor.fetchall():
-			if li == license and (vendor_name == '' or vendor_name == None):
+			if li == license and (vendor_name == '' or vendor_name is None):
 				return True
 		return False
 

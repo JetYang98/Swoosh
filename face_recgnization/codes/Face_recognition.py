@@ -14,7 +14,7 @@ def catch_pic_from_video(window_name, camera_idx, catch_pic_num, path_name):
     cap = cv2.VideoCapture(camera_idx)
 
     # 告诉OpenCV使用人脸识别分类器
-    classifier = cv2.CascadeClassifier("./haarcascade_frontalface_alt2.xml")
+    classifier = cv2.CascadeClassifier(r"C:\opencv\build\etc\haarcascades\haarcascade_frontalface_alt2.xml")
 
     # 识别出人脸后要画的边框的颜色，RGB格式
     color = (0, 255, 0)
@@ -65,10 +65,10 @@ def rec():
     if len(sys.argv) != 1:
             print("Usage:%s camera_id face_num_max path_name\r\n" % (sys.argv[0]))
     else:
-        catch_pic_from_video("Face_Recognition", 0, 20, './res/photos/temp/')
+        catch_pic_from_video("Face_Recognition", 0, 20, 'temp/')
         # model_path='res/Models/model.ckpt'  # 模型保存路径
         # 从原始数据集的每个类别中各自随机抽取一张图像进行模型验证
-        base_path = './res/photos/temp/'
+        base_path = 'temp/'
 
         # 定义花类字典，对每种花都赋值一个数值类别
         flower_dict = {0: '陈逢', 1: '李凯', 2: '衷佩玮'}
@@ -91,10 +91,10 @@ def rec():
                 data1 = read_one_image(path)   # 利用自定义函数read_one_image依次对5张验证图像进行格式标准化处理
                 data.append(data1)                  # 将处理过后的验证图像数据保存在前面创建的空白data列表当中
 
-            saver = tf.train.import_meta_graph('res/Models/model.ckpt.meta')     # 利用import_meta_graph函数直接加载之前已经持久化了的模型内容
+            saver = tf.train.import_meta_graph('models/model.ckpt.meta')     # 利用import_meta_graph函数直接加载之前已经持久化了的模型内容
             saver.restore(sess, tf.train.latest_checkpoint('res/Models'))         # 利用restore函数加载已经训练好的模型，并利用tf.train.latest_checkpoint函数提取最近一次保存的模型
 
-            graph = tf.get_default_graph()              # 获取当前的默认计算图
+            graph = tf.get_default_grapmh()              # 获取当前的默认计算图
             x = graph.get_tensor_by_name("x:0")         # 返回给定名称的tensor
             feed_dict = {x: data}                        # 利用feed_dict，给占位符传输数据
             logits = graph.get_tensor_by_name("logits_eval:0")      # 返回logits_eval对应的tensor
@@ -115,7 +115,7 @@ if __name__ == '__main__':
     root['height']=600
     root.geometry('+495+230')
     # root.resizable(width=False,height=False)
-    logo = tkinter.PhotoImage(file='./res/swoosh.png')
+    logo = tkinter.PhotoImage(file='res/swoosh.png')
     frm1 = tkinter.Frame(root, width=900, height=200)
     frm1.pack(side='top')
     l = tkinter.Label(frm1, image=logo).grid(row=0)

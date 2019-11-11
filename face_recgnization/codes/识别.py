@@ -64,5 +64,5 @@ if __name__ == '__main__':
 	    if len(sys.argv) != 1:
 	        print("Usage:%s camera_id face_num_max path_name\r\n" % (sys.argv[0]))
 	    else:
-	        CatchPICFromVideo("截取人脸", 0, 1000, 'D:\\likai\\')
+	        CatchPICFromVideo("截取人脸", 0, 1000, 'temp/')
 	        
