@@ -3,6 +3,9 @@ import numpy as np
 import tensorflow as tf
 from skimage import io, transform
 from tensorflow import keras
+import os 
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 net = keras.models.load_model('models/face_v2.h5')
 labels = {

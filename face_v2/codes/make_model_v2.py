@@ -6,6 +6,8 @@ import tensorflow as tf
 from skimage import io, transform
 from tensorflow import keras
 
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
 w, h = 100, 100
 
 
