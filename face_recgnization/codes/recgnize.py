@@ -5,10 +5,8 @@ import tensorflow as tf # tensorflow是目前业界最流行的深度学习框�
 import numpy as np  # numpy是一个基于python的科学计算包，在该实验中主要用来处理数值运算，包括创建爱你等差数组，生成随机数组，聚合运算等。
 
 # path='res/photos/'  # 数据存放路径 
-model_path='res/Models/model.ckpt'  # 模型保存路径 
-
-# 从原始数据集的每个类别中各自随机抽取一张图像进行模型验证
-base_path = 'res/photos/chenfeng/'
+model_path='models/model.ckpt'  # 模型保存路径 
+base_path = 'temp/'
 
 # 定义花类字典，对每种花都赋值一个数值类别
 flower_dict = {0:'李凯',1:'杨宗瑾',2:'胡英强',3:'衷佩玮',4:'陈逢'} 
@@ -31,8 +29,8 @@ with tf.Session() as sess:              # 创建会话，用于执行已经定�
         data1 = read_one_image(path)   # 利用自定义函数read_one_image依次对5张验证图像进行格式标准化处理
         data.append(data1)                  # 将处理过后的验证图像数据保存在前面创建的空白data列表当中
 
-    saver = tf.train.import_meta_graph('../res/Models/model.ckpt.meta')     # 利用import_meta_graph函数直接加载之前已经持久化了的模型内容
-    saver.restore(sess,tf.train.latest_checkpoint('../res/Models'))         # 利用restore函数加载已经训练好的模型，并利用tf.train.latest_checkpoint函数提取最近一次保存的模型
+    saver = tf.train.import_meta_graph('models/model.ckpt.meta')     # 利用import_meta_graph函数直接加载之前已经持久化了的模型内容
+    saver.restore(sess,tf.train.latest_checkpoint('models/'))         # 利用restore函数加载已经训练好的模型，并利用tf.train.latest_checkpoint函数提取最近一次保存的模型
 
     graph = tf.get_default_graph()              # 获取当前的默认计算图 
 

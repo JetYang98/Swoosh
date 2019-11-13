@@ -15,7 +15,7 @@ import time  # time模块主要用于处理时间系列的数据，在该实验�
 def make_model():
 
     path = 'res/photos/'  # 数据存放路径
-    model_path = 'res/models/model.ckpt'  # 模型保存路径
+    model_path = 'models/model.ckpt'  # 模型保存路径
 
     # 设置图像处理之后的大小（由于是RGB格式数据，长宽高分别是100*100*3）
     w = 100

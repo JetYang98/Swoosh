@@ -92,7 +92,7 @@ def rec():
                 data.append(data1)                  # 将处理过后的验证图像数据保存在前面创建的空白data列表当中
 
             saver = tf.train.import_meta_graph('models/model.ckpt.meta')     # 利用import_meta_graph函数直接加载之前已经持久化了的模型内容
-            saver.restore(sess, tf.train.latest_checkpoint('res/Models'))         # 利用restore函数加载已经训练好的模型，并利用tf.train.latest_checkpoint函数提取最近一次保存的模型
+            saver.restore(sess, tf.train.latest_checkpoint('models/'))         # 利用restore函数加载已经训练好的模型，并利用tf.train.latest_checkpoint函数提取最近一次保存的模型
 
             graph = tf.get_default_grapmh()              # 获取当前的默认计算图
             x = graph.get_tensor_by_name("x:0")         # 返回给定名称的tensor
