@@ -1,0 +1,8 @@
+*/.vscode/
+*/.idea/
+*/res/photos/
+*/logs/
+*/models/
+*/temp/
+*/venv/
+photos/
